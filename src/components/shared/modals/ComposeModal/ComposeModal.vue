@@ -24,11 +24,13 @@ const activeTabName = ref("contacts");
 
 // (event) switch between the contacts and group tabs
 const handleSwitchTab = (tabName: string) => {
+  console.log("CALL handleSwitchTab");
   activeTabName.value = tabName;
 };
 
 // the active tab contacts or group.
 const activeTab = computed(() => {
+  console.log("CALL activeTab");
   if (activeTabName.value === "contacts") {
     return ContactsTab;
   } else {

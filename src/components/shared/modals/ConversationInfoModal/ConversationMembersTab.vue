@@ -40,6 +40,7 @@ const closeDropdowns = () => {
 
 // (event) open/close the dropdown menu
 const handleToggleDropdown = (event: Event, contactIndex: number) => {
+  console.log("CALL handleToggleDropdown");
   if (contactContainer) {
     let buttonBottom = (
       event.currentTarget as HTMLElement
@@ -68,6 +69,7 @@ const handleToggleDropdown = (event: Event, contactIndex: number) => {
 
 // (event) close doprdown menu when clicking outside
 const handleClickOutside = (event: Event) => {
+  console.log("CALL handleClickOutside");
   let target = event.target as HTMLElement;
 
   if (

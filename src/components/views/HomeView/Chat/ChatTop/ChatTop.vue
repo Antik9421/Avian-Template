@@ -30,16 +30,19 @@ const openInfo = ref(false);
 
 // (event) open search modal
 const handleOpenSearch = () => {
+  console.log("CALL handleOpenSearch");
   openSearch.value = true;
 };
 
 // (event) open info modal
 const handleOpenInfo = () => {
+  console.log("CALL handleOpenInfo");
   openInfo.value = true;
 };
 
 // (event) close the voice call modal and minimize the call
 const handleCloseVoiceCallModal = (endCall: boolean) => {
+  console.log("CALL handleCloseVoiceCallModal");
   if (endCall) {
     store.activeCall = undefined;
     store.callMinimized = false;

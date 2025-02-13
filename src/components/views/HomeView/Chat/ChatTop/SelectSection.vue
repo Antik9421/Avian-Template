@@ -12,6 +12,7 @@ const props = defineProps<{
 
 // (event) toggle the select all checkbox
 const handleCheck = () => {
+  console.log("CALL handleCheck");
   if (props.selectAll) {
     props.handleDeselectAll();
   } else {

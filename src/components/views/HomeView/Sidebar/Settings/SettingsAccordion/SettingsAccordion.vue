@@ -22,6 +22,7 @@ const accordionState = ref({
 });
 
 const handleToggle = (name: accordionItems) => {
+  console.log("CALL handleToggle");
   // close all opened tabs
   for (let key of Object.keys(accordionState.value)) {
     if (key !== name) {

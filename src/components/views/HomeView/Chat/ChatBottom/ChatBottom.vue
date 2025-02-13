@@ -40,16 +40,19 @@ const openAttachmentsModal = ref(false);
 
 // start and stop recording.
 const handleToggleRecording = () => {
+  console.log("CALL handleToggleRecording");
   recording.value = !recording.value;
 };
 
 // stop recording without sending.
 const handleCancelRecording = () => {
+  console.log("CALL handleCancelRecording");
   recording.value = false;
 };
 
 // close picker when you click outside.
 const handleClickOutside = (event: Event) => {
+  console.log("CALL handleClickOutside");
   let target = event.target as HTMLElement;
   let parent = target.parentElement as HTMLElement;
 
@@ -65,6 +68,7 @@ const handleClickOutside = (event: Event) => {
 
 // (event) set the draft message equals the content of the text area
 const handleSetDraft = () => {
+  console.log("CALL handleSetDraft");
   const index = getConversationIndex(activeConversation.id);
   if (index !== undefined) {
     store.conversations[index].draftMessage = value.value;

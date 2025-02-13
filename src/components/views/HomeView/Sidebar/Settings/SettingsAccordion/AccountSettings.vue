@@ -36,6 +36,7 @@ const loading = ref(false);
 
 // (event) handle submitting the values of the form.
 const handleSubmit = () => {
+  console.log("CALL handleSubmit");
   loading.value = true;
 
   store.$patch({
@@ -91,15 +92,13 @@ const handleCountryChange = (value: string) => {
       @value-changed="(value) => (accountValues.firstName = value)"
     /> -->
 
-<!-- 
+    <!-- 
     <LabeledTextInput
       label="Last name"
       inputClasses="mb-7"
       :value="accountValues?.lastName"
       @value-changed="(value) => (accountValues.lastName = value)"
     /> -->
-    
-
 
     <LabeledTextInput
       label="First name"
@@ -117,10 +116,9 @@ const handleCountryChange = (value: string) => {
         :modelValue="selectedCountry"
         @valueChanged="handleCountryChange"
       />
-      <br>
+      <br />
       <p>Выбрана страна: {{ selectedCountry }}</p>
     </div>
-
 
     <DropFileUpload
       label="Аватар"

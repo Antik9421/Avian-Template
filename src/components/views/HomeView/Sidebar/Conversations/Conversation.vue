@@ -36,6 +36,7 @@ const contextMenuCoordinations: Ref<{ x: number; y: number } | undefined> =
 
 // open context menu.
 const handleShowContextMenu = (event: any) => {
+  console.log("CALL handleShowContextMenu ");
   showContextMenu.value = true;
   contextMenuCoordinations.value = {
     x:
@@ -51,11 +52,13 @@ const handleShowContextMenu = (event: any) => {
 
 // (event) closes the context menu
 const handleCloseContextMenu = () => {
+  console.log("CALL handleCloseContextMenu");
   showContextMenu.value = false;
 };
 
 // (event) select this conversation.
 const handleSelectConversation = () => {
+  console.log("CALL handleSelectConversation");
   showContextMenu.value = false;
   router.push({ path: `/chat/${props.conversation.id}/` });
 };
@@ -67,6 +70,7 @@ const lastMessage = computed(
 
 // (event) remove the unread indicator when opening the conversation
 const handleRemoveUnread = () => {
+  console.log("CALL handleRemoveUnread");
   let index = getConversationIndex(props.conversation.id);
   if (index !== undefined) {
     store.conversations[index].unread = 0;

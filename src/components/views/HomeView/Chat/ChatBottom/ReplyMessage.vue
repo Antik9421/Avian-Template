@@ -17,6 +17,7 @@ const activeConversation = <IConversation>inject("activeConversation");
 
 // (event) removes the reply message from top of the text message textarea
 const handleRemoveReplyMessage = () => {
+  console.log("CALL andleRemoveReplyMessage");
   if (activeConversation) {
     // get the active conversation index in the state store
     let activeConversationIndex = getConversationIndex(activeConversation.id);

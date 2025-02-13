@@ -46,7 +46,7 @@ const handleChangeActiveTab = (event: {
 }) => {
   animation.value = event.animationName;
   activePageName.value = event.tabName;
-
+  console.log("CALL handleChangeActiveTab");
   if (event.contact) {
     selectedMember.value = event.contact;
   }

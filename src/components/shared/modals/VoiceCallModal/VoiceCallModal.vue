@@ -41,6 +41,7 @@ const ActiveTab = computed((): any => {
 });
 
 const handleCallStatusChange = (status: string) => {
+  console.log("CALL handleCallStatusChange");
   if (store.activeCall) {
     store.activeCall.status = status;
   }

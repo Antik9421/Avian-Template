@@ -16,6 +16,7 @@ const store = useStore();
 const activeConversation = <IConversation>inject("activeConversation");
 // (event) hide the pinned message
 const handleHidePinnedMessage = () => {
+  console.log("CALL handleHidePinnedMessage");
   if (activeConversation) {
     // get the active conversation index in the state store
     let activeConversationIndex = getConversationIndex(activeConversation.id);
@@ -33,6 +34,7 @@ const handleHidePinnedMessage = () => {
 
 // (event) remove the pinned message
 const handleRemovePinnedMessage = () => {
+  console.log("CALL handleRemovePinnedMessage");
   if (activeConversation) {
     // get the active conversation index in the state store
     let activeConversationIndex = getConversationIndex(activeConversation.id);

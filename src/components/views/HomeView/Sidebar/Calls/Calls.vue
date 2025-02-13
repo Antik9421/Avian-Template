@@ -23,6 +23,7 @@ const selectedCall: Ref<ICall | null> = ref(null);
 const openInfoModal = ref(false);
 // (event) opens the voice call info modal
 const handleOpenInfoModal = (call: ICall) => {
+  console.log("CALL handleOpenInfoModal");
   openInfoModal.value = true;
   selectedCall.value = call;
 };
@@ -30,7 +31,6 @@ const handleOpenInfoModal = (call: ICall) => {
 
 <template>
   <div>
-    
     <SidebarHeader>
       <template v-slot:title>Voice Calls</template>
       <template v-slot:actions>

@@ -24,6 +24,7 @@ const closeOnClick = (event: Event) => {
 
 // (event) close modal when typing esc button
 const handleCloseOnEscape = (event: KeyboardEvent) => {
+  console.log("CALL handleCloseOnEscape");
   if (["Escape", "Esc"].includes(event.key)) {
     props.closeModal();
   }

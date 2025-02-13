@@ -22,6 +22,7 @@ const showDropdown = ref(false);
 
 // (event) change the active sidebar component when clicking on a NavLink
 const handleActiveSidebarComponentChange = (value: string) => {
+  console.log("CALL handleActiveSidebarComponentChange");
   store.activeSidebarComponent = value;
 };
 </script>

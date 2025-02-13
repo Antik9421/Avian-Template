@@ -34,11 +34,13 @@ const showDropdown = ref(false);
 
 // (event) close dropdown menu when click item
 const handleCloseDropdown = () => {
+  console.log("CALL handleCloseDropdown");
   showDropdown.value = false;
 };
 
 // (event) close dropdown menu when clicking outside the menu.
 const handleClickOutside = (event: Event) => {
+  console.log("CALL handleClickOutside");
   let target = event.target as HTMLElement;
   let parentElement = target.parentElement as HTMLElement;
 
@@ -54,11 +56,13 @@ const handleClickOutside = (event: Event) => {
 
 // (event) navigate to the /chat/ url
 const handleCloseConversation = () => {
+  console.log("CALL handleCloseConversation");
   router.push({ path: "/chat/" });
 };
 
 // (event) open the voice call modal and expand call
 const handleOpenVoiceCallModal = () => {
+  console.log("CALL handleOpenVoiceCallModal");
   store.activeCall = activeCall;
   store.callMinimized = false;
 

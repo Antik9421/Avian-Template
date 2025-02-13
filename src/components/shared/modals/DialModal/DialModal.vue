@@ -37,6 +37,7 @@ const isContactSelected = (contact: IContact) => {
 
 // (event) change the value of selected contacts
 const handleSelectedContactsChange = (contact: IContact) => {
+  console.log("CALL handleSelectedContactsChange");
   let contactIndex = selectedContacts.value.findIndex(
     (item) => item.id === contact.id,
   );

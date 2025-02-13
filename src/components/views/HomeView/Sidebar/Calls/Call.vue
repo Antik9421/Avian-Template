@@ -25,6 +25,7 @@ const members = computed(() => {
 });
 
 const handleOpenInfoModal = () => {
+  console.log("CALL handleOpenInfoModal");
   if (props.openInfoModal && !props.active) {
     props.openInfoModal(props.call);
   }

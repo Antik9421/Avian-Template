@@ -40,6 +40,7 @@ const contextMenuCoordinations: Ref<{ x: number; y: number }> = ref({
 
 // open context menu.
 const handleShowContextMenu = (event: any) => {
+  console.log("CALL handleShowContextMenu");
   showContextMenu.value = true;
   contextMenuCoordinations.value = {
     x:
@@ -55,6 +56,7 @@ const handleShowContextMenu = (event: any) => {
 
 // closes the context menu
 const handleCloseContextMenu = () => {
+  console.log("CALL handleCloseContextMenu");
   showContextMenu.value = false;
 };
 
@@ -66,6 +68,7 @@ const contextConfig = {
 
 // decide whether to show or hide avatar next to the image.
 const hideAvatar = () => {
+  console.log("CALL hideAvatar");
   if (props.divider && !props.self) {
     return false;
   } else {
@@ -177,10 +180,8 @@ const replyMessage = getMessageById(activeConversation, props.message.replyTo);
         <!--date-->
         <div :class="props.self ? ['ml-4', 'order-1'] : ['mr-4']">
           <p class="body-1 text-color whitespace-pre">
-            {{ props.message.date }} 
-            
+            {{ props.message.date }}
           </p>
-          
         </div>
 
         <!--read receipt-->

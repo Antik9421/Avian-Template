@@ -33,6 +33,7 @@ const activeConversation = <IConversation>inject("activeConversation");
 
 // (event) pin message to conversation
 const handlePinMessage = () => {
+  console.log("CALL handlePinMessage");
   props.handleCloseContextMenu();
 
   if (activeConversation) {
@@ -54,6 +55,7 @@ const handlePinMessage = () => {
 
 // (event) select the reply message.
 const handleReplyToMessage = () => {
+  console.log("CALL handleReplyToMessage");
   props.handleCloseContextMenu();
 
   if (activeConversation) {

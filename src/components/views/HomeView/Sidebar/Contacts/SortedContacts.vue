@@ -33,6 +33,7 @@ const dropdownMenuStates: Ref<boolean[][] | undefined> = ref(
 
 // close all contact dropdown menus
 const handleCloseAllMenus = () => {
+  console.log("CALL handleCloseAllMenus");
   dropdownMenuStates.value = props.contactGroups?.map((contactGroup) => {
     let group = contactGroup.contacts.map(() => false);
     return group;
@@ -45,6 +46,7 @@ const handleToggleDropdown = (
   groupIndex: number,
   index: number,
 ) => {
+  console.log("CALL handleToggleDropdown");
   if (props.bottomEdge) {
     let buttonBottom = (
       event.currentTarget as HTMLElement
@@ -59,6 +61,7 @@ const handleToggleDropdown = (
 
   dropdownMenuStates.value = (dropdownMenuStates.value as boolean[][]).map(
     (group) => {
+      console.log("CALL dropdownMenuStates");
       return group.map((value, idx) => {
         if (idx === index) return value;
         else return false;
@@ -73,6 +76,7 @@ const handleToggleDropdown = (
 
 // (event) close dropdown menu when clicking outside
 const handleClickOutside = (event: Event) => {
+  console.log("CALL handleClickOutside");
   let target = event.target as HTMLElement;
   let parentElement = target.parentElement as HTMLElement;
 

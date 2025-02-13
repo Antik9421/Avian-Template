@@ -14,4 +14,13 @@ export default defineConfig({
       "@custom_types": resolve(rootDir, "src/@custom_types"),
     },
   },
+  server: {
+    proxy: {
+      "/proxy": {
+        target: "https://perdos.link/",
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/proxy/, "/"),
+      },
+    },
+  },
 });

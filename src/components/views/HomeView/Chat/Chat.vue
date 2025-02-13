@@ -16,6 +16,7 @@ const store = useStore();
 
 // search the selected conversation using activeConversationId.
 const activeConversation = computed(() => {
+  console.log("CALL: activeConversation");
   let activeConversation = store.conversations.find(
     (conversation) => conversation.id === getActiveConversationId(),
   );
@@ -43,6 +44,7 @@ const selectedMessages: Ref<number[]> = ref([]);
 
 // (event) add message to select messages.
 const handleSelectMessage = (messageId: number) => {
+  console.log("CALL: handleSelectMessage");
   selectedMessages.value.push(messageId);
 
   if (
@@ -59,6 +61,7 @@ const handleSelectMessage = (messageId: number) => {
 
 // (event) remove message from select messages.
 const handleDeselectMessage = (messageId: number) => {
+  console.log("CALL: handleDeselectMessage");
   selectAll.value = false;
   selectedMessages.value = selectedMessages.value.filter(
     (item) => item !== messageId,
@@ -71,6 +74,7 @@ const handleDeselectMessage = (messageId: number) => {
 
 // (event) select all messages.
 const handleSelectAll = () => {
+  console.log("CALL: handleSelectAll");
   if (activeConversation.value) {
     const messages = activeConversation.value.messages.map(
       (message) => message.id,
@@ -82,12 +86,14 @@ const handleSelectAll = () => {
 
 // (event) remove the selected messages.
 const handleDeselectAll = () => {
+  console.log("CALL: handleDeselectAll");
   selectAll.value = false;
   selectedMessages.value = [];
 };
 
 // (event handle close Select)
 const handleCloseSelect = () => {
+  console.log("CALL: handleCloseSelect");
   selectMode.value = false;
   selectAll.value = false;
   selectedMessages.value = [];

@@ -76,6 +76,7 @@ const imageInvisibility = ref(true);
 
 // (event) set moved to false and then close modal
 const handleCloseCarousel = () => {
+  console.log("CALL handleCloseCarousel");
   moved.value = false;
   zoom.value = 1;
   props.closeCarousel();

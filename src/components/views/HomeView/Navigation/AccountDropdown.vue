@@ -21,6 +21,7 @@ const store = useStore();
 
 // (event) close dropdown menu when clicking outside
 const handleCloseOnClickOutside = (event: Event) => {
+  console.log("CALL handleCloseOnClickOutside");
   if (
     !["user-avatar", "profile-menu-button"].includes(
       (event.target as HTMLButtonElement).id,

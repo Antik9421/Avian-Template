@@ -19,6 +19,7 @@ const loading = ref(true);
 
 // (event) turns the audio on/off
 const handleTogglePlay = () => {
+  console.log("CALL handleTogglePlay");
   if (wavesurfer.value) {
     if (playing.value) {
       playing.value = false;

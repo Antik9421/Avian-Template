@@ -23,6 +23,7 @@ const activeConversation = <IConversation>inject("activeConversation");
 
 // checks whether the previous message was sent by the same user.
 const isFollowUp = (index: number, previousIndex: number): boolean => {
+  console.log("CALL isFollowUp");
   if (previousIndex < 0) {
     return false;
   } else {
@@ -34,11 +35,13 @@ const isFollowUp = (index: number, previousIndex: number): boolean => {
 
 // checks whether the message is sent by the authenticated user.
 const isSelf = (message: IMessage): boolean => {
+  console.log("CALL isSelf");
   return Boolean(store.user && message.sender.id === store.user.id);
 };
 
 // checks wether the new message has been sent in a new day or not.
 const renderDivider = (index: number, previousIndex: number): boolean => {
+  console.log("CALL renderDivider");
   if (index === 3) {
     return true;
   } else {
