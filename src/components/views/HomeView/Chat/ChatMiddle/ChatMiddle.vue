@@ -49,6 +49,20 @@ const renderDivider = (index: number, previousIndex: number): boolean => {
   }
 };
 
+const handleScroll = () => {
+  const scrollTop = event.target.scrollTop;
+  const scrollHeight = event.target.scrollHeight;
+  const clientHeight = event.target.clientHeight;
+
+  if (scrollTop === 0) {
+    console.log("Начало страницы");
+    // вызови handler для начала страницы
+  } else if (scrollTop + clientHeight >= scrollHeight) {
+    console.log("Конец страницы");
+    // вызови handler для конца страницы
+  }
+};
+
 // scroll messages to bottom.
 onMounted(() => {
   (container.value as HTMLElement).scrollTop = (
@@ -61,6 +75,7 @@ onMounted(() => {
   <div
     ref="container"
     class="grow px-5 py-5 flex flex-col overflow-y-scroll scrollbar-hidden"
+    @scroll="handleScroll"
   >
     <div
       v-if="store.status !== 'loading'"
