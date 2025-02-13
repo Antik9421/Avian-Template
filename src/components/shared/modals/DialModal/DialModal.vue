@@ -64,7 +64,7 @@ const handleSelectedContactsChange = (contact: IContact) => {
             class="outlined-danger ghost-text py-2 px-4"
             typography="body-4"
           >
-            esc
+            X
           </Button>
         </div>
 

@@ -23,21 +23,21 @@ const store = useStore();
     aria-controls="appearance-settings-collapse"
     @click="props.handleToggle()"
   >
-    <p class="heading-2 text-color mb-4">Appearance</p>
-    <p class="body-2 text-color">Customize the look and feel</p>
+    <p class="heading-2 text-color mb-4">Внешний вид</p>
+    <p class="body-2 text-color">Настройте внешний вид и ощущения</p>
   </AccordionButton>
 
   <Collapse id="appearance-settings-collapse" :collapsed="props.collapsed">
     <SettingsSwitch
-      title="Dark Mode"
-      description="Apply a theme with dark colors"
+      title="Темный режим"
+      description="Применить тему с темными цветами"
       :value="!!store.settings.darkMode"
       :handle-toggle-switch="(value) => (store.settings.darkMode = value)"
       class="mb-7"
     />
     <SettingsSwitch
-      title="Bordered Theme"
-      description="Apply borders to the theme"
+      title="Тема с рамкой"
+      description="Применить границы к теме"
       :value="!!store.settings.borderedTheme"
       :handle-toggle-switch="(value) => (store.settings.borderedTheme = value)"
       class="mb-7"

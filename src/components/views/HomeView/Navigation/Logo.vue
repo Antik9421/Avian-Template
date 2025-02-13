@@ -31,13 +31,13 @@ const store = useStore();
     >
       <img
         v-if="!store.settings.darkMode"
-        src="@src/assets//vectors/logo.svg"
+        src="@src/assets//vectors/favicon.ico"
         class="w-8 h-7"
         alt="gray bird logo"
       />
       <img
         v-else
-        src="@src/assets/vectors/logo-white.svg"
+        src="@src/assets/vectors/favicon.ico"
         class="w-8 h-7 opacity-40"
         alt="white bird logo"
       />

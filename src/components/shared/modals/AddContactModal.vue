@@ -23,7 +23,7 @@ const props = defineProps<{
             class="outlined-danger ghost-text py-2 px-4"
             @click="props.closeModal"
           >
-            esc
+            X
           </Button>
         </div>
 

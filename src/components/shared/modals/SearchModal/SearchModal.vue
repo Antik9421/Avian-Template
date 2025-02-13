@@ -22,7 +22,7 @@ const props = defineProps<{
         <!--header-->
         <div class="mb-6 px-5 flex justify-between items-center">
           <p id="modal-title" class="heading-1 text-color" tabindex="0">
-            Messages
+            Чат
           </p>
 
           <Button
@@ -30,7 +30,7 @@ const props = defineProps<{
             class="outlined-danger ghost-text py-2 px-4"
             typography="body-4"
           >
-            esc
+            X
           </Button>
         </div>
 

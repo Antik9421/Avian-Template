@@ -135,13 +135,13 @@ const handleClickOutside = (event: Event) => {
           >
             <button
               class="dropdown-link dropdown-link-primary"
-              aria-label="Show profile information"
+              aria-label="Показать информацию профиля"
               role="menuitem"
             >
               <InformationCircleIcon
                 class="h-5 w-5 mr-3 text-black opacity-60 dark:text-white dark:opacity-70"
               />
-              Personal information
+              Личная информация
             </button>
 
             <button

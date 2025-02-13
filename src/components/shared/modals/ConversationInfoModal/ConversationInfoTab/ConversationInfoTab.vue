@@ -57,7 +57,7 @@ const imageUrl = computed(() => {
         @click="props.closeModal"
         class="outlined-danger ghost-text py-2 px-4"
       >
-        esc
+        X
       </Button>
 
       <!--return button-->
@@ -110,8 +110,8 @@ const imageUrl = computed(() => {
               <!--or number of group members-->
               {{
                 conversation.type === "couple" || props.contact
-                  ? "Last seen Dec 16, 2019"
-                  : `${conversation.contacts.length} Contacts`
+                  ? "Последний вход Dec 16, 2019"
+                  : `${conversation.contacts.length} Контакт`
               }}
             </p>
           </div>

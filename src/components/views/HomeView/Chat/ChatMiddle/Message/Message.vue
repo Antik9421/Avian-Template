@@ -147,7 +147,7 @@ const replyMessage = getMessageById(activeConversation, props.message.replyTo);
           ></p>
 
           <!--recording-->
-          <div
+          <!-- <div
             v-else-if="
               props.message.content && props.message.type === 'recording'
             "
@@ -156,7 +156,7 @@ const replyMessage = getMessageById(activeConversation, props.message.replyTo);
               :recording="<IRecording>props.message.content"
               :self="props.self"
             />
-          </div>
+          </div> -->
 
           <!--attachments-->
           <Attachments
@@ -166,19 +166,21 @@ const replyMessage = getMessageById(activeConversation, props.message.replyTo);
           />
 
           <!--link preview-->
-          <LinkPreview
+          <!-- <LinkPreview
             v-if="props.message.previewData && !props.message.attachments"
             :self="props.self"
             :preview-data="props.message.previewData as IPreviewData"
             class="mt-5"
-          />
+          /> -->
         </div>
 
         <!--date-->
         <div :class="props.self ? ['ml-4', 'order-1'] : ['mr-4']">
           <p class="body-1 text-color whitespace-pre">
-            {{ props.message.date }}
+            {{ props.message.date }} 
+            
           </p>
+          
         </div>
 
         <!--read receipt-->

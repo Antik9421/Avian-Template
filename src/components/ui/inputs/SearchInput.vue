@@ -14,7 +14,7 @@ const props = defineProps<{
 
 <template>
   <LabeledTextInput
-    placeholder="Search.."
+    placeholder="Поиск.."
     class="pl-7"
     :value="props.value"
     @value-changed="(value) => $emit('valueChanged', value)"

@@ -71,17 +71,17 @@ const handleCloseOnClickOutside = (event: Event) => {
     >
       <button
         class="dropdown-link dropdown-link-primary"
-        aria-label="Show profile information"
+        aria-label="Покаказать информацию профиля"
         role="menuitem"
         @click="props.handleCloseDropdown"
       >
         <InformationCircleIcon
           class="h-5 w-5 mr-3 text-black opacity-60 dark:text-white dark:opacity-70"
         />
-        Profile Information
+        Информация о профиле
       </button>
 
-      <RouterLink
+      <!-- <RouterLink
         to="/reset/"
         class="dropdown-link dropdown-link-primary"
         aria-label="change password"
@@ -92,9 +92,9 @@ const handleCloseOnClickOutside = (event: Event) => {
           class="h-5 w-5 mr-3 text-black opacity-60 dark:text-white dark:opacity-70"
         />
         Password Change
-      </RouterLink>
+      </RouterLink> -->
 
-      <RouterLink
+      <!-- <RouterLink
         to="/access/sign-in/"
         class="dropdown-link dropdown-link-danger"
         aria-label="logout"
@@ -103,7 +103,7 @@ const handleCloseOnClickOutside = (event: Event) => {
       >
         <ArrowLeftOnRectangleIcon class="h-5 w-5 mr-3" />
         Logout
-      </RouterLink>
+      </RouterLink> -->
     </Dropdown>
   </div>
 </template>

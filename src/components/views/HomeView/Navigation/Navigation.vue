@@ -48,14 +48,14 @@ const handleActiveSidebarComponentChange = (value: string) => {
           </li>
 
           <!--contacts list button-->
-          <li>
+          <!-- <li>
             <NavLink
               :icon="UserIcon"
               title="Contacts"
               @click="() => handleActiveSidebarComponentChange('contacts')"
               :active="store.activeSidebarComponent === 'contacts'"
             />
-          </li>
+          </li> -->
 
           <!--dropdown button small screen-->
           <li>
@@ -70,7 +70,7 @@ const handleActiveSidebarComponentChange = (value: string) => {
           </li>
 
           <!--notifications button-->
-          <li class="xs:hidden md:inline">
+          <!-- <li class="xs:hidden md:inline">
             <NavLink
               :icon="BellIcon"
               title="Notifications"
@@ -78,17 +78,17 @@ const handleActiveSidebarComponentChange = (value: string) => {
               @click="() => handleActiveSidebarComponentChange('notifications')"
               :active="store.activeSidebarComponent === 'notifications'"
             />
-          </li>
+          </li> -->
 
           <!--voice call button-->
-          <li>
+          <!-- <li>
             <NavLink
               :icon="PhoneIcon"
               title="Call log"
               @click="() => handleActiveSidebarComponentChange('phone')"
               :active="store.activeSidebarComponent === 'phone'"
             />
-          </li>
+          </li> -->
 
           <!--settings button small screen-->
           <li class="xs:inline md:hidden">

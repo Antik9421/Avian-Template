@@ -12,10 +12,10 @@ import { ChatBubbleOvalLeftIcon } from "@heroicons/vue/24/solid";
       />
     </div>
 
-    <p class="heading-2 text-color mb-3">No chat selected</p>
+    <p class="heading-2 text-color mb-3">Чат не выбран</p>
 
     <p class="body-2 text-color flex">
-      Select a conversation from the conversation menu.
+      Выберите разговор в меню разговоров.
     </p>
   </div>
 </template>

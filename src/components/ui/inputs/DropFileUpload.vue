@@ -73,8 +73,8 @@ const handleFileChange = (event: Event) => {
           v-else
           class="body-2 text-black text-opacity-40 dark:text-white dark:text-opacity-70"
         >
-          Choose a file <br />
-          or drop it here.
+          Выберите файл <br />
+          или перетащите его сюда.
         </p>
       </div>
     </label>

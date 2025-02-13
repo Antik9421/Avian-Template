@@ -28,9 +28,9 @@ const props = defineProps<{
 
     <!--content-->
     <div :class="props.vertical ? [] : ['flex', 'flex-col', 'items-start']">
-      <p class="heading-2 text-color mb-3">No conversations</p>
+      <p class="heading-2 text-color mb-3">Нет разговоров</p>
 
-      <p class="body-2 text-color flex">click pencil icon to create one.</p>
+      <p class="body-2 text-color flex">нажмите на значок карандаша, чтобы создать его.</p>
     </div>
   </div>
 </template>

@@ -16,7 +16,7 @@ const store = useStore();
 
 <template>
   <!--privacy settings-->
-  <AccordionButton
+  <!-- <AccordionButton
     id="privacy-settings-toggler"
     class="w-full flex px-5 py-6 mb-3 rounded focus:outline-none"
     :collapsed="props.collapsed"
@@ -26,7 +26,7 @@ const store = useStore();
   >
     <p class="mb-4 heading-2 text-color">Privacy & Safety</p>
     <p class="body-2 text-color">Control your privacy settings</p>
-  </AccordionButton>
+  </AccordionButton> -->
 
   <Collapse id="privacy-settings-collapse" :collapsed="props.collapsed">
     <SettingsSwitch

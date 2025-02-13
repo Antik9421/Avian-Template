@@ -10,7 +10,7 @@ import Button from "@src/components/ui/inputs/Button.vue";
 import DropFileUpload from "@src/components/ui/inputs/DropFileUpload.vue";
 import LabeledTextInput from "@src/components/ui/inputs/LabeledTextInput.vue";
 import Collapse from "@src/components/ui/utils/Collapse.vue";
-
+import SelectBox from "@src/components/ui/inputs/SelectBox.vue";
 // Types
 interface AccountValues {
   firstName: string | undefined;
@@ -50,6 +50,23 @@ const handleSubmit = () => {
     loading.value = false;
   }, 2000);
 };
+
+const selectedCountry = ref("");
+const countries = [
+  { value: "RU", label: "🇷🇺 Россия" },
+  { value: "AZ", label: "🇦🇿 Азербайджан" },
+  { value: "AM", label: "🇦🇲 Армения" },
+  { value: "BY", label: "🇧🇾 Беларусь" },
+  { value: "GE", label: "🇬🇪 Грузия" },
+  { value: "KZ", label: "🇰🇿 Казахстан" },
+  { value: "KG", label: "🇰🇬 Киргизия" },
+  { value: "UZ", label: "🇺🇿 Узбекистан" },
+  { value: "UA", label: "🇺🇦 Украина" },
+];
+
+const handleCountryChange = (value: string) => {
+  selectedCountry.value = value;
+};
 </script>
 
 <template>
@@ -62,25 +79,51 @@ const handleSubmit = () => {
     aria-controls="account-settings-collapse"
     @click="handleToggle()"
   >
-    <p class="heading-2 text-color mb-4">Account</p>
-    <p class="body-2 text-color">Update your profile details</p>
+    <p class="heading-2 text-color mb-4">Аккаунт</p>
+    <p class="body-2 text-color">Обновите данные вашего профиля</p>
   </AccordionButton>
 
   <Collapse id="account-settings-collapse" :collapsed="props.collapsed">
+    <!-- <LabeledTextInput
+      label="First name"
+      inputClasses="mb-7"
+      :value="accountValues?.firstName"
+      @value-changed="(value) => (accountValues.firstName = value)"
+    /> -->
+
+<!-- 
+    <LabeledTextInput
+      label="Last name"
+      inputClasses="mb-7"
+      :value="accountValues?.lastName"
+      @value-changed="(value) => (accountValues.lastName = value)"
+    /> -->
+    
+
+
     <LabeledTextInput
       label="First name"
       inputClasses="mb-7"
       :value="accountValues?.firstName"
       @value-changed="(value) => (accountValues.firstName = value)"
     />
-    <LabeledTextInput
-      label="Last name"
-      inputClasses="mb-7"
-      :value="accountValues?.lastName"
-      @value-changed="(value) => (accountValues.lastName = value)"
-    />
+
+    <div>
+      <SelectBox
+        id="userCountrySelect"
+        name="userCountry"
+        label="Выберите страну"
+        :countries="countries"
+        :modelValue="selectedCountry"
+        @valueChanged="handleCountryChange"
+      />
+      <br>
+      <p>Выбрана страна: {{ selectedCountry }}</p>
+    </div>
+
+
     <DropFileUpload
-      label="Avatar"
+      label="Аватар"
       class="mb-7"
       accept="image/*"
       :value="accountValues.avatar"
@@ -91,7 +134,7 @@ const handleSubmit = () => {
       @click="handleSubmit"
       :loading="loading"
     >
-      Save Settings
+      Сохранить настройки
     </Button>
   </Collapse>
 </template>

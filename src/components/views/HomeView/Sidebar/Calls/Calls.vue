@@ -30,11 +30,9 @@ const handleOpenInfoModal = (call: ICall) => {
 
 <template>
   <div>
+    
     <SidebarHeader>
-      <!--title-->
       <template v-slot:title>Voice Calls</template>
-
-      <!--side actions-->
       <template v-slot:actions>
         <IconButton
           @click="openDialModal = true"
