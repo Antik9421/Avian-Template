@@ -6,6 +6,8 @@ import { computed, provide, ref } from "vue";
 
 import { getActiveConversationId } from "@src/utils";
 
+import {loadNewMessages} from "@src/utils/messages";
+
 import NoChatSelected from "@src/components/states/empty-states/NoChatSelected.vue";
 import Spinner from "@src/components/states/loading-states/Spinner.vue";
 import ChatBottom from "@src/components/views/HomeView/Chat/ChatBottom/ChatBottom.vue";
@@ -22,6 +24,17 @@ const activeConversation = computed(() => {
   );
 
   if (activeConversation) {
+
+    // переключить хранилище на новый диалог
+    if (store.user && store.user.position) {
+      console.log("Active chat", activeConversation)
+      store.user.position.userId = activeConversation.id;
+      store.user.position.page = 1;
+    }
+  
+    // Загрузить сообщения для этого диалога 
+    loadNewMessages("top", true)
+
     return activeConversation;
   } else {
     return store.archivedConversations.find(

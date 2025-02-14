@@ -119,6 +119,7 @@ export const hasAttachments = (message: IMessage) => {
  */
 export const getActiveConversationId = () => {
   const route = useRoute();
+  console.log("ConversationID", route.params.id)
   return route.params.id ? Number(route.params.id) : undefined;
 };
 

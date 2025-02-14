@@ -16,7 +16,7 @@ export const defaultSettings = [
 
 // контакты пользователя (типа адресная книга) (нигде не используется)
 export const user = {
-  id: 1,
+  id: null,
   firstName: "Dawn",
   lastSeen: new Date(),
   lastName: "Sabrina",
@@ -72,75 +72,75 @@ export const conversations = [
       },
     ],
     messages: [
-      {
-        id: 1,
-        content: "Привет дрочим",
-        date: "1:00 pm",
-        state: "read",
-        sender: {
-          id: 1,
-          firstName: "Dawn",
-          lastName: "Sabrina",
-          lastSeen: new Date(),
-          email: "sabrina@gmail.com",
-          avatar:
-            "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
-        },
-      },
-      {
-        id: 2,
-        content: "Давай",
-        date: "2:00 pm",
-        state: "read",
-        sender: {
-          id: 2,
-          email: "user@gmail.com",
-          firstName: "Ahmed",
-          lastName: "Ali",
-          lastSeen: new Date(),
-          avatar:
-            "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
-        },
-      },
-      {
-        id: 5,
-        content: "Ловите фотки",
-        date: "5:00 pm",
-        state: "delivered",
-        sender: {
-          id: 1,
-          firstName: "Dawn",
-          lastName: "Sabrina",
-          lastSeen: new Date(),
-          email: "sabrina@gmail.com",
-          avatar:
-            "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
-        },
-        attachments: [
-          {
-            id: 3,
-            type: "image",
-            name: "mountain.jpg",
-            size: "20 MB",
-            url: "https://images.unsplash.com/photo-1664091729644-07a158d7c4ca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyNHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60",
-          },
-          {
-            id: 2,
-            type: "image",
-            name: "pumkins.jpg",
-            size: "20 MB",
-            url: "https://images.unsplash.com/photo-1664031315855-955dbca83172?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
-          },
-          {
-            id: 1,
-            type: "image",
-            name: "forest.jpg",
-            size: "20 MB",
-            url: "https://images.unsplash.com/photo-1664021975758-78d83898225d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxOXx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60",
-          },
-        ],
-        replyTo: 4,
-      },
+      // {
+      //   id: 1,
+      //   content: "Привет дрочим",
+      //   date: "1:00 pm",
+      //   state: "read",
+      //   sender: {
+      //     id: 1,
+      //     firstName: "Dawn",
+      //     lastName: "Sabrina",
+      //     lastSeen: new Date(),
+      //     email: "sabrina@gmail.com",
+      //     avatar:
+      //       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+      //   },
+      // },
+      // {
+      //   id: 2,
+      //   content: "Давай",
+      //   date: "2:00 pm",
+      //   state: "read",
+      //   sender: {
+      //     id: 2,
+      //     email: "user@gmail.com",
+      //     firstName: "Ahmed",
+      //     lastName: "Ali",
+      //     lastSeen: new Date(),
+      //     avatar:
+      //       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+      //   },
+      // },
+      // {
+      //   id: 5,
+      //   content: "Ловите фотки",
+      //   date: "5:00 pm",
+      //   state: "delivered",
+      //   sender: {
+      //     id: 1,
+      //     firstName: "Dawn",
+      //     lastName: "Sabrina",
+      //     lastSeen: new Date(),
+      //     email: "sabrina@gmail.com",
+      //     avatar:
+      //       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+      //   },
+      //   attachments: [
+      //     {
+      //       id: 3,
+      //       type: "image",
+      //       name: "mountain.jpg",
+      //       size: "20 MB",
+      //       url: "https://images.unsplash.com/photo-1664091729644-07a158d7c4ca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyNHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60",
+      //     },
+      //     {
+      //       id: 2,
+      //       type: "image",
+      //       name: "pumkins.jpg",
+      //       size: "20 MB",
+      //       url: "https://images.unsplash.com/photo-1664031315855-955dbca83172?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+      //     },
+      //     {
+      //       id: 1,
+      //       type: "image",
+      //       name: "forest.jpg",
+      //       size: "20 MB",
+      //       url: "https://images.unsplash.com/photo-1664021975758-78d83898225d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxOXx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60",
+      //     },
+      //   ],
+      //   replyTo: 4,
+      // },
       
     ],
   },
@@ -364,18 +364,56 @@ export const fetchData = async (userId : number | null, page: number, position =
   await delay(1000);
   const store = useStore();
 
-  const messages = await getChat(userId, page);
+  const new_conversation = await getChat(userId, page);
+
+  // ищем userId или вставляем в публичный чат
+  let conversationIndex = store.conversations.findIndex(conversation => conversation.id === store.user?.position.userId);
+  if (conversationIndex === -1){
+    conversationIndex = 0;
+  }
 
   // Merge and add only if the message ID is unique
-  const existingMessageIds = new Set(conversations[0]["messages"].map((msg) => msg.id));
-  const uniqueMessages = messages.filter((msg) => !existingMessageIds.has(msg.id));
+  let existingMessageIds = new Set();
+  if (conversationIndex in conversations){
+    existingMessageIds = new Set(conversations[conversationIndex]["messages"].map((msg) => msg.id));
+  }
+
+  const uniqueMessages = new_conversation[conversationIndex]["messages"].filter((msg) => !existingMessageIds.has(msg.id));
 
   // Создаем новый массив чтобы vue подгрузил его (в начало или конец зависит от позиции)
+  let new_message;
   if (position == "bottom") {
-    store.conversations[0].messages = [...store.conversations[0].messages, ...uniqueMessages];
+    new_message = [...store.conversations[conversationIndex].messages, ...uniqueMessages];
   } else {
-    store.conversations[0].messages = [...uniqueMessages, ...store.conversations[0].messages];
+    new_message = [...uniqueMessages, ...store.conversations[conversationIndex].messages];
   }
+
+  const existingIds = store.conversations.map(conversation => conversation.id);
+  const newConversations = new_conversation.filter(conversation => !existingIds.includes(conversation.id));
+  store.conversations.push(...newConversations);
+
+  conversationIndex = store.conversations.findIndex(conversation => conversation.id === store.user?.position.userId);
+  if (conversationIndex === -1){
+    conversationIndex = 0;
+  }
+
+  store.conversations[conversationIndex]["messages"] = new_message;
+
+
+
+
+  // console.log("List", [...store.conversations, ...new_conversation])
+
+  // //store.conversations = [store.conversations[0], ...new_conversation.slice(1)];
+  // store.conversations.push(...new_conversation.slice(1));
+    
+  // ищем userId или вставляем в публичный чат
+  // conversationIndex = store.conversations.findIndex(conversation => conversation.id === store.user?.position.userId);
+  // if (conversationIndex === -1){
+  //   conversationIndex = 0;
+  // }
+
+  
   
   return await {
     data: {
