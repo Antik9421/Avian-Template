@@ -87,24 +87,6 @@ const useStore = defineStore("chat", () => {
 
   const getStatus = computed(() => status);
 
-  // Функция для загрузки новых сообщений (вызывает внутренню функцию)
-  const loadMessages = async () => {
-    try {
-      const response = await fetchData(); // Используем существующую функцию fetchData
-      conversations.value = response.data.conversations; // Обновляем список сообщений
-      console.log("Update messages")
-    } catch (error) {
-      console.error("Ошибка при загрузке сообщений:", error);
-    }
-  };
-
-  // Запуск интервала для обновления сообщений
-  const startMessagePolling = () => {
-    setInterval(loadMessages, 5000); // Обновляем каждые 5 секунд
-  };
-
-  // Запускаем интервал при инициализации хранилища
-  startMessagePolling();
 
   return {
     // status refs

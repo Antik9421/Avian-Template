@@ -1,4 +1,4 @@
-import { getLastPublicChat } from "@src/store/adaptor";
+import { getChat } from "@src/store/adaptor";
 
 
 export const defaultSettings = [
@@ -44,6 +44,10 @@ export const user = {
         "https://images.pexels.com/photos/1851164/pexels-photo-1851164.jpeg?cs=srgb&dl=pexels-charles-1851164.jpg&fm=jpg",
     },
   ],
+  position: {
+    userId: null,
+    page: 1,
+  },
 };
 
 export const conversations = [
@@ -52,7 +56,7 @@ export const conversations = [
     type: "group",
     name: "Публичный Чат Perdos",
     avatar:
-      "https://images.unsplash.com/photo-1573867639040-6dd25fa5f597?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+      "#",
     admins: [1],
     draftMessage: "",
     contacts: [
@@ -64,7 +68,7 @@ export const conversations = [
         lastSeen: new Date(),
         email: "sabrina@gmail.com",
         avatar:
-          "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+          "#",
       },
     ],
     messages: [
@@ -155,7 +159,7 @@ export const archive = [
         lastName: "Sabrina",
         lastSeen: new Date(),
         avatar:
-          "https://images.unsplash.com/photo-1657214059233-5626b35eb349?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=436&q=80",
+          "#",
       },
       {
         id: 1,
@@ -164,7 +168,7 @@ export const archive = [
         lastSeen: new Date(),
         email: "sabrina@gmail.com",
         avatar:
-          "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+          "#",
       },
     ],
     messages: [
@@ -180,7 +184,7 @@ export const archive = [
           lastSeen: new Date(),
           email: "sabrina@gmail.com",
           avatar:
-            "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+            "#",
         },
       },
     ],
@@ -198,7 +202,7 @@ export const archive = [
         lastName: "Carr",
         lastSeen: new Date(),
         avatar:
-          "https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+          "#",
       },
       {
         id: 1,
@@ -207,7 +211,7 @@ export const archive = [
         lastSeen: new Date(),
         email: "sabrina@gmail.com",
         avatar:
-          "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+          "#",
       },
     ],
     messages: [
@@ -223,7 +227,7 @@ export const archive = [
           lastSeen: new Date(),
           email: "sabrina@gmail.com",
           avatar:
-            "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+            "#",
         },
       },
     ],
@@ -276,7 +280,7 @@ export const calls = [
         lastSeen: new Date(),
         email: "sabrina@gmail.com",
         avatar:
-          "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+          "#",
       },
       {
         id: 2,
@@ -285,7 +289,7 @@ export const calls = [
         lastName: "Ali",
         lastSeen: new Date(),
         avatar:
-          "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+          "#",
       },
     ],
     adminIds: [1],
@@ -306,7 +310,7 @@ export const calls = [
         lastSeen: new Date(),
         email: "sabrina@gmail.com",
         avatar:
-          "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+          "#",
       },
       {
         id: 5,
@@ -315,7 +319,7 @@ export const calls = [
         lastName: "Billy",
         lastSeen: new Date(),
         avatar:
-          "https://images.unsplash.com/photo-1522556189639-b150ed9c4330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+          "#",
       },
     ],
     adminIds: [1],
@@ -338,7 +342,7 @@ export const activeCall = {
       lastSeen: new Date(),
       email: "sabrina@gmail.com",
       avatar:
-        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+        "#",
     },
     {
       id: 8,
@@ -347,7 +351,7 @@ export const activeCall = {
       lastName: "Billy",
       lastSeen: new Date(),
       avatar:
-        "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8cGVvcGxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+        "#",
     },
   ],
   adminIds: [1],
@@ -355,17 +359,24 @@ export const activeCall = {
 
 const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
-export const fetchData = async () => {
-  await delay(2000);
+import useStore from "@src/store/store";
+export const fetchData = async (userId : number | null, page: number, position = "bottom") => {
+  await delay(1000);
+  const store = useStore();
 
-  // conversations[0]["messages"] = getLastPublicChat()
-  const messages = await getLastPublicChat()
+  const messages = await getChat(userId, page);
 
-  conversations[0]["messages"] = messages
+  // Merge and add only if the message ID is unique
+  const existingMessageIds = new Set(conversations[0]["messages"].map((msg) => msg.id));
+  const uniqueMessages = messages.filter((msg) => !existingMessageIds.has(msg.id));
 
-  // console.log("fetchdeata", user, conversations)
-
-
+  // Создаем новый массив чтобы vue подгрузил его (в начало или конец зависит от позиции)
+  if (position == "bottom") {
+    store.conversations[0].messages = [...store.conversations[0].messages, ...uniqueMessages];
+  } else {
+    store.conversations[0].messages = [...uniqueMessages, ...store.conversations[0].messages];
+  }
+  
   return await {
     data: {
       user: user,
@@ -394,14 +405,14 @@ export const attachments = [
     type: "file",
     name: "lecture-10.pdf",
     size: "52.4 MB",
-    url: "https://images.unsplash.com/photo-1664091729644-07a158d7c4ca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyNHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60",
+    url: "#",
   },
   {
     id: 10,
     type: "video",
     name: "fun-video.mp4",
     size: "11.4 MB",
-    url: "https://images.unsplash.com/photo-1559705421-4ae9bf6fabb5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+    url: "#",
   },
 ];
 

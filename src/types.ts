@@ -7,6 +7,12 @@ export interface IUser {
   token: string;
   lastSeen: Date;
   contacts: IContact[];
+  position: IPosition,
+}
+
+export interface IPosition {
+  userId: number;
+  page: number;
 }
 
 export interface IContact {

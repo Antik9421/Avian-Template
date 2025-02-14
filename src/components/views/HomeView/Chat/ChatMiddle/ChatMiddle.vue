@@ -6,6 +6,8 @@ import { inject, onMounted, ref } from "vue";
 
 import useStore from "@src/store/store";
 
+import {loadNewMessages} from "@src/utils/messages";
+
 import Message from "@src/components/views/HomeView/Chat/ChatMiddle/Message/Message.vue";
 import TimelineDivider from "@src/components/views/HomeView/Chat/ChatMiddle/TimelineDivider.vue";
 
@@ -56,9 +58,11 @@ const handleScroll = () => {
 
   if (scrollTop === 0) {
     console.log("Начало страницы");
+    loadNewMessages("top", true);
     // вызови handler для начала страницы
-  } else if (scrollTop + clientHeight >= scrollHeight) {
+  } else if (scrollTop + clientHeight >= scrollHeight - 1) {
     console.log("Конец страницы");
+    loadNewMessages("bottom", true);
     // вызови handler для конца страницы
   }
 };

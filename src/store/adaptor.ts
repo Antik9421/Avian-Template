@@ -1,10 +1,11 @@
+import useStore from "@src/store/store";
+
 const BASE_DOMAIN = "/proxy";
 
-export const getLastPublicChat = async (): Promise<any> => {
-  let ownUserId = 6;
-
+export const getChat = async (userId: number | null, page: number): Promise<any> => {
+ 
   try {
-    const response = await fetch(`${BASE_DOMAIN}/mashina_besedka`);
+    const response = await fetch(`${BASE_DOMAIN}/mashina_besedka?${(userId != null) ? `user=${userId}&` : ''}page=${page}`);
     const html = await response.text();
     const parser = new DOMParser();
     const doc = parser.parseFromString(html, "text/html");

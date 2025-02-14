@@ -101,7 +101,7 @@ const replyMessage = getMessageById(activeConversation, props.message.replyTo);
           ></div>
         </div>
       </div>
-
+      <span>{{ props.message.sender.firstName }}</span>
       <div class="flex items-end">
         <!--bubble-->
         <div
