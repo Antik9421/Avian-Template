@@ -1,3 +1,6 @@
+Сайт закрытлся проект закрыт
+
+
 > [!IMPORTANT]  
 > Will begin implementing the new styles specified in the figma design file.
 
